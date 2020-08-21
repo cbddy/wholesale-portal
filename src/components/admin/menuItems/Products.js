@@ -185,6 +185,7 @@ export const ProductShow = props => {
 const productCategories = [
   { id: 'flower', name: 'Flower' },
   { id: 'edibles', name: 'Edibles' },
+  { id: 'tinctures', name: 'Tinctures' },
   { id: 'concentrates', name: 'Concentrates' },
   { id: 'topicals', name: 'Topicals' },
   { id: 'pet_products', name: 'Pet Products' },
@@ -416,7 +417,7 @@ const ProductShowActions = ({ permissions, basePath, data, resource }) => (
   <TopToolbar>
     <EditButton label='Edit' basePath={basePath} record={data} />
     {permissions === 'owner' && (
-      <DeleteButton basePath={basePath} record={data} label="Disable" />
+      <DeleteButton basePath={basePath} record={data} label='Disable' />
     )}
     <ListButton basePath={basePath} record={data} />
     {/* Add your custom actions */}
