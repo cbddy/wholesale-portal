@@ -415,7 +415,7 @@ const ProductTitle = ({ record }) => {
 
 const ProductShowActions = ({ permissions, basePath, data, resource }) => (
   <TopToolbar>
-    <EditButton label='Edit' basePath={basePath} record={data} />
+    <EditButton label='Edit' basePath={basePath} record={data}/>
     {permissions === 'owner' && (
       <DeleteButton basePath={basePath} record={data} label='Disable' />
     )}
