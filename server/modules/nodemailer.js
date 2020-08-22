@@ -32,13 +32,13 @@ const addCustomOrderToCart = (order, user, employee, products) => {
     subject: "Your custom order from CBDDY",
     html: `
     <html>
-      <h5>${employee.name} from CBDDY has made a custom order for you</h5>
+      <h5>Hello ${user.name}, ${employee.name} from CBDDY has created a custom order for you!</h5>
       <h5>Order details</h5>
       <h5>${order.name}</h5>
       <h5>${order.description}</h5>
       ${productTable}
-      <p>An order like this would usually cost $${order.standardPrice}. However, Cbddy is offering it to you for $${order.price}.</p>
-      <p>If you wish to continue proceed to our website where your cart has already been prepared.</p>
+      <p>The products listed above has been bundled together for you for a total of $${order.price}.</p>
+      <p>Please proceed to our website where your cart has already been prepared. All you need to do is check out!</p>
       <p> Login at ${process.env.DEV_URI} </p>
     </html>`
   })
